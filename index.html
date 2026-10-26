@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INSTITUTO XAVIER PARA SUPERDOTADOS</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsivo.css">
+</head>
+
+<body>
+  <header class="cabecalho">
+    <img class="logo" src="img/logo.svg" alt="Logo do X-Men">
+  </header>
+
+  <audio id="tema" autoplay loop>
+    <source src="sound/tema.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="btn">
+    <source src="sound/btn.mp3" type="audio/mpeg">
+  </audio>
+
+  <main class="selecao-de-personagens">
+
+    <!-- ÁREA DOS PERSONAGENS ESCOLHIDOS -->
+    <div class="grid p1p2">
+
+      <!-- JOGADOR 1: X-MEN -->
+      <section class="personagem-selecionado" id="p1" data-player="1">
+        <img class="personagem-grande" src="img/card-noturno.png" alt="Personagem selecionado pelo jogador 1">
+
+        <div class="informacoes-personagem">
+          <h1 class="nome-personagem" id="nome-personagem">Ciclope</h1>
+          <p class="descricao-personagem" id="descricao-personagem">
+            Ele tem o poder de disparar rajadas ópticas, mas não consegue controlá-las completamente.
+          </p>
+        </div>
+
+        <div id="modal-p1" class="modal oculto">
+          <div class="modal-conteudo">
+            <h2>Deseja confirmar sua escolha?</h2>
+            <button id="btn-confirmar-p1" type="button">Confirmar</button>
+            <button id="btn-negar-p1" type="button">Negar</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- JOGADOR 2: SENAI -->
+      <section class="personagem-selecionado opacidade" id="p2" data-player="2">
+        <img class="personagem-grande-senai" src="img/imagem-grande-Grazi.png" alt="Personagem selecionado pelo jogador 2">
+
+        <div class="informacoes-personagem">
+          <h1 class="nome-personagem" id="nome-personagem-senai">Grazi</h1>
+          <p class="descricao-personagem" id="descricao-personagem-senai">
+            Grazi é responsável pela união da equipe e pela coordenação do trabalho no SENAI.
+          </p>
+        </div>
+
+        <div id="modal-p2" class="modal2 oculto">
+          <div class="modal-conteudo">
+            <h2>Deseja confirmar sua escolha?</h2>
+            <button id="btn-confirmar-p2" type="button">Confirmar</button>
+            <button id="btn-negar-p2" type="button">Negar</button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- LISTAS DE SELEÇÃO -->
+    <div class="grid">
+
+      <!-- LISTA DO JOGADOR 1 -->
+      <section class="personagens" data-player="1" id="personagens-xmen">
+        <h1 class="titulo">Selecione um personagem P1</h1>
+
+        <ul class="lista-de-personagens">
+          <li class="personagem selecionado xmen"
+              id="ciclope-p1"
+              data-name="Ciclope"
+              data-description="Ele tem o poder de disparar rajadas ópticas, mas não consegue controlá-las completamente."
+              data-image="img/card-noturno.png">
+            <img class="card" src="img/card-ciclope.jpg" alt="Personagem Ciclope">
+          </li>
+
+          <li class="personagem xmen"
+              id="jean-grey-p1"
+              data-name="Jean Grey"
+              data-description="Jean Grey é uma mutante nível ômega, ligada à Força Fênix, e possui telepatia e telecinese."
+              data-image="img/card-jean-grey.jpg">
+            <img class="card" src="img/card-jean-grey.jpg" alt="Personagem Jean Grey">
+          </li>
+
+          <li class="personagem xmen"
+              id="lince-negra-p1"
+              data-name="Lince Negra"
+              data-description="Ela consegue atravessar matéria sólida e campos de energia sem sofrer danos."
+              data-image="img/card-lince-negra.jpg">
+            <img class="card" src="img/card-lince-negra.jpg" alt="Personagem Lince Negra">
+          </li>
+
+          <li class="personagem xmen"
+              id="tempestade-p1"
+              data-name="Tempestade"
+              data-description="Ela controla as forças da natureza, como raios, chuvas, gelo, ventos e neblina."
+              data-image="img/card-tempestade.jpg">
+            <img class="card" src="img/card-tempestade.jpg" alt="Personagem Tempestade">
+          </li>
+
+          <li class="personagem xmen"
+              id="vampira-p1"
+              data-name="Vampira"
+              data-description="Ela absorve a vitalidade, as memórias e, temporariamente, os poderes de outras pessoas por meio do toque."
+              data-image="img/card-vampira.jpg">
+            <img class="card" src="img/card-vampira.jpg" alt="Personagem Vampira">
+          </li>
+
+          <li class="personagem xmen"
+              id="wolverine-p1"
+              data-name="Wolverine"
+              data-description="Possui garras de adamantium, fator de cura regenerativo e superagilidade."
+              data-image="img/card-wolverine.jpg">
+            <img class="card" src="img/card-wolverine.jpg" alt="Personagem Wolverine">
+          </li>
+
+          <li class="personagem xmen"
+              id="noturno-p1"
+              data-name="Noturno"
+              data-description="É um mutante com cauda e orelhas pontudas que consegue se teletransportar."
+              data-image="img/card-noturno.png">
+            <img class="card" src="img/card-noturno.jpg" alt="Personagem Noturno">
+          </li>
+
+          <li class="personagem xmen"
+              id="magneto-p1"
+              data-name="Magneto"
+              data-description="Ele possui magnetocinese, conseguindo controlar metais e criar campos magnéticos."
+              data-image="img/card-magneto.jpg">
+            <img class="card" src="img/card-magneto.jpg" alt="Personagem Magneto">
+          </li>
+        </ul>
+      </section>
+
+      <!-- LISTA DO JOGADOR 2 -->
+      <section class="personagens opacidade" data-player="2" id="personagens-senai">
+        <h1 class="titulo">Selecione um personagem P2</h1>
+
+        <ul class="lista-de-personagens personagens-senai">
+          <li class="personagem senai selecionado2"
+              id="grazi"
+              data-name="Grazi"
+              data-description="Grazi é responsável pela união da equipe e pela coordenação do trabalho, fazendo diferentes setores atuarem como uma única força."
+              data-image="img/imagem-grande-Grazi.png">
+            <img class="card" src="./cards/grazi.png" alt="Personagem Grazi">
+          </li>
+
+          <li class="personagem senai"
+              id="brenda"
+              data-name="Brenda"
+              data-description="Brenda é secretária do SENAI. Ela lança ondas sônicas com seu estetoscópio e possui super audição, capaz de identificar pontos vitais."
+              data-image="./cards/brenda.png">
+            <img class="card" src="./cards/brenda.png" alt="Personagem Brenda">
+          </li>
+
+          <li class="personagem senai"
+              id="clesio"
+              data-name="Clésio"
+              data-description="Clésio é gerente do SENAI e monta estratégias para liderar setores. Seu poder, Decreto de Gestão, reorganiza setores, redistribui recursos e estabelece regras temporárias."
+              data-image="./cards/clesio.png">
+            <img class="card" src="./cards/clesio.png" alt="Personagem Clésio">
+          </li>
+
+          <li class="personagem senai"
+              id="cleverson"
+              data-name="Cleverson"
+              data-description="Cleverson trabalha com grandes contratos na área administrativa. Sua força aumenta a cada contrato conquistado e diminui a cada perda."
+              data-image="./cards/cleverson.png">
+            <img class="card" src="./cards/cleverson.png" alt="Personagem Cleverson">
+          </li>
+
+          <li class="personagem senai"
+              id="elisangela"
+              data-name="Elisangela"
+              data-description="Elisangela é assistente do fiscal e cuida da parte financeira. Seu poder é o Cálculo Absoluto, que permite calcular somas, dívidas e orçamentos sem erros."
+              data-image="./cards/elisangela.png">
+            <img class="card" src="./cards/elisangela.png" alt="Personagem Elisangela">
+          </li>
+
+          <li class="personagem senai"
+              id="janete"
+              data-name="Janete"
+              data-description="Janete trabalha na segurança do SENAI e utiliza uma tonfa com carga elétrica, capaz de disparar ondas elétricas."
+              data-image="./cards/janete.png">
+            <img class="card" src="./cards/janete.png" alt="Personagem Janete">
+          </li>
+
+          <li class="personagem senai"
+              id="jose"
+              data-name="José"
+              data-description="José é engenheiro de segurança e ensina alunos da área. Seu poder, Visão de Risco, identifica perigos invisíveis, falhas estruturais e ameaças escondidas."
+              data-image="./cards/jose.png">
+            <img class="card" src="./cards/jose.png" alt="Personagem José">
+          </li>
+
+          <li class="personagem senai"
+              id="gilberto"
+              data-name="Gilberto"
+              data-description="Gilberto é técnico de segurança do SENAI. Possui super visão e super velocidade, que, com muito esforço, pode até parar o tempo."
+              data-image="./cards/julberto.png">
+            <img class="card" src="./cards/julberto.png" alt="Personagem Gilberto">
+          </li>
+
+          <li class="personagem senai"
+              id="rubens"
+              data-name="Rubens"
+              data-description="Rubens é técnico em TI e consegue manipular códigos do próprio corpo e dos adversários para obter diferentes poderes, consumindo sua vitalidade ao usá-los."
+              data-image="./cards/rubens.png">
+            <img class="card" src="./cards/rubens.png" alt="Personagem Rubens">
+          </li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
