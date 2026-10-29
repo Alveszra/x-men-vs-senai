@@ -3,7 +3,7 @@ const personagens = document.querySelectorAll(".xmen");
 const personagensSenai = document.querySelectorAll(".senai");
 const personasSenai = document.getElementById("personagens-senai");
 
-const personagens = document.querySelectorAll(".personagem")
+
 
 const musica = new Audio("sound/tema.mp3")
 musica.loop = true
