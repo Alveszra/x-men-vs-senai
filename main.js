@@ -29,6 +29,12 @@ musica.volume = 0.4
 
 const som = document.getElementById('btn') || new Audio('sound/btn.mp3')
 
+const confirmar = document.getElementById('confirmar') || new Audio('sound/confirmar.mp3')
+musica.volume = 0.8 
+
+const cancelar = document.getElementById('cancelar') || new Audio('sound/cancelar.mp3')
+musica.volume = 0.8 
+
 // O navegador exige uma interação do usuário para tocar áudio
 const tocarMusica = () => musica.play().catch(() => {})
 document.addEventListener('click', tocarMusica, { once: true })
@@ -36,6 +42,16 @@ document.addEventListener('click', tocarMusica, { once: true })
 function tocarSom() {
     som.currentTime = 0
     som.play().catch(() => {})
+}
+
+function tocarSomConfirmar() {
+    confirmar.currentTime = 0 
+    confirmar.play().catch( () => {})
+}
+
+function tocarSomCancelar() {
+    cancelar.currentTime = 0 
+    cancelar.play().catch( () => {})
 }
 
 function modalAberto(modal) {
@@ -113,6 +129,8 @@ personagens.forEach(personagem => {
 confirmarP1.addEventListener('click', () => {
     if (!modalAberto(modalP1) || p1Confirmado) return
 
+    tocarSomConfirmar()
+
     p1Confirmado = true
     modalP1.classList.add('oculto')
     atualizarEstadoJogadores() // Congela P1 e libera P2
@@ -121,6 +139,9 @@ confirmarP1.addEventListener('click', () => {
 cancelarP1?.addEventListener('click', () => {
     if (p1Confirmado) return
     modalP1.classList.add('oculto')
+
+    tocarSomCancelar()
+
     // Continua permitindo selecionar personagens no P1
 })
 
@@ -142,6 +163,8 @@ personagensSenai.forEach(personagem => {
 confirmarP2.addEventListener('click', () => {
     if (!modalAberto(modalP2) || !p1Confirmado || p2Confirmado) return
 
+    tocarSomConfirmar()
+
     p2Confirmado = true
     modalP2.classList.add('oculto')
     atualizarEstadoJogadores() // Congela a seleção do P2
@@ -155,6 +178,8 @@ confirmarP2.addEventListener('click', () => {
 cancelarP2?.addEventListener('click', () => {
     if (!p1Confirmado || p2Confirmado) return
     modalP2.classList.add('oculto')
+
+    tocarSomCancelar()
     // Continua permitindo selecionar personagens no P2
 })
 
